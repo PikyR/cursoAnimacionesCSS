@@ -1,3 +1,13 @@
+body {
+  counter-reset: score-counter;
+}
 
+input:checked {
+  counter-increment: score-counter;
+}
+
+.score::after {
+  content: counter(score-counter);
+}
 
 /*# sourceMappingURL=styles.css.map */
