@@ -1,0 +1,19 @@
+body {
+  counter-reset: score-counter;
+
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+input:checked {
+  counter-increment: score-counter;
+}
+
+.score {
+
+  &::after{
+    content: counter(score-counter);
+  }
+}

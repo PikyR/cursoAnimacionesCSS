@@ -1,0 +1,75 @@
+@mixin wall-bg {
+  background-image: linear-gradient(
+    50deg,
+    #a55c3a 10%,
+    #c26b43 10%,
+    #c26b43 20%,
+    #a55c3a 20%,
+    #a55c3a 30%,
+    #c26b43 30%,
+    #c26b43 40%,
+    #a55c3a 40%,
+    #a55c3a 50%,
+    #c26b43 50%,
+    #c26b43 60%,
+    #a55c3a 60%,
+    #a55c3a 70%,
+    #c26b43 70%,
+    #c26b43 80%,
+    #a55c3a 80%,
+    #a55c3a 90%,
+    #c26b43 90%
+  );
+}
+
+@mixin shadow($inner: "simple") {
+  @if $inner == "simple" {
+    box-shadow: 
+      rgba(50, 50, 93, 0.25) 10px 5px 12px -5px,
+      rgba(50, 50, 93, 0.25) -10px 5px 12px -5px,
+      rgba(0, 0, 0, 0.3) 5px 5px 10px -7px,
+      rgba(0, 0, 0, 0.3) -5px 5px 10px -7px
+    ;  
+  } 
+  @if $inner == "inset" {
+    box-shadow: 
+      rgba(50, 50, 93, 0.25) 10px 5px 12px -5px,
+      rgba(50, 50, 93, 0.25) -10px 5px 12px -5px,
+      rgba(0, 0, 0, 0.3) 5px 5px 10px -7px,
+      rgba(0, 0, 0, 0.3) -5px 5px 10px -7px,
+      rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;  
+    ;
+  }
+}
+
+@mixin rabbit($height) {
+  width: 80px;
+  height: $height;
+  border-start-start-radius: 40px;
+  border-start-end-radius: 40px;
+  background-color: whitesmoke;
+  bottom: 0;
+
+  @include shadow(simple);
+}
+
+@mixin wall($width, $height) {
+  bottom: 0;
+
+  width: $width;
+  height: $height;
+
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-block-start: 30px solid olivedrab;
+ 
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-block-start: 12px dashed olivedrab;
+  }
+  
+  @include wall-bg();
+  @include shadow(inset);
+}
