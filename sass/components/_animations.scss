@@ -1,5 +1,13 @@
 @keyframes blink {
-  0% {}
-  5% {}
-  10% {}
+  0% {
+    height: 7px;
+  }
+  5% {
+    height: 2px;
+    transform: translate(0px, 50%);
+  }
+  10% {
+    height: 7px;
+    transform: translate(0px, 0px);
+  }
 }

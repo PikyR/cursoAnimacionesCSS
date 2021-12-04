@@ -13,7 +13,19 @@ input:checked {
   content: counter(score-counter);
 }
 
-@keyframes blink {}
+@keyframes blink {
+  0% {
+    height: 7px;
+  }
+  5% {
+    height: 2px;
+    transform: translate(0px, 50%);
+  }
+  10% {
+    height: 7px;
+    transform: translate(0px, 0px);
+  }
+}
 html {
   min-width: 320px;
 }
@@ -139,6 +151,8 @@ html {
   position: absolute;
   top: 18px;
   animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   left: 25px;
 }
 .head::after {
@@ -150,6 +164,8 @@ html {
   position: absolute;
   top: 18px;
   animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   right: 25px;
 }
 
