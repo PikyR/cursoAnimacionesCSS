@@ -22,54 +22,51 @@
   );
 }
 
-@mixin shadow($inner: "simple") {
+@mixin shadow($inner) {
+  $shadow-value: 
+    rgba(50, 50, 93, 0.25) 10px 5px 12px -5px,
+    rgba(50, 50, 93, 0.25) -10px 5px 12px -5px,
+    rgba(0, 0, 0, 0.3) 5px 5px 10px -7px,
+    rgba(0, 0, 0, 0.3) -5px 5px 10px -7px
+  ;
+
   @if $inner == "simple" {
     box-shadow: 
-      rgba(50, 50, 93, 0.25) 10px 5px 12px -5px,
-      rgba(50, 50, 93, 0.25) -10px 5px 12px -5px,
-      rgba(0, 0, 0, 0.3) 5px 5px 10px -7px,
-      rgba(0, 0, 0, 0.3) -5px 5px 10px -7px
+      $shadow-value
     ;  
   } 
-  @if $inner == "inset" {
+  @if $inner == "inner" {
     box-shadow: 
-      rgba(50, 50, 93, 0.25) 10px 5px 12px -5px,
-      rgba(50, 50, 93, 0.25) -10px 5px 12px -5px,
-      rgba(0, 0, 0, 0.3) 5px 5px 10px -7px,
-      rgba(0, 0, 0, 0.3) -5px 5px 10px -7px,
-      rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;  
+      $shadow-value, 
+      rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset
     ;
   }
 }
 
-@mixin rabbit($height) {
-  width: 80px;
-  height: $height;
-  border-start-start-radius: 40px;
-  border-start-end-radius: 40px;
-  background-color: whitesmoke;
-  bottom: 0;
-
-  @include shadow(simple);
+@mixin eye($side: l) {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 18px;
+  
+  @if $side == l {
+    left: 25px;
+  } @else if $side == r {
+    right: 25px;
+  }
 }
 
-@mixin wall($width, $height) {
-  bottom: 0;
-
-  width: $width;
+@mixin rabbit-container($height) {
+  width: 80px;
   height: $height;
+  bottom: 0;
+}
 
-  border-start-start-radius: 20px;
-  border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
- 
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    border-block-start: 12px dashed olivedrab;
-  }
-  
-  @include wall-bg();
-  @include shadow(inset);
+@mixin wall-container($width, $height) {
+  bottom: 0;
+  width: $width;
+  height: $height;  
 }

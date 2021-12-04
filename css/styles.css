@@ -34,115 +34,137 @@ html {
   overflow: hidden;
 }
 
+.ear {
+  width: 20px;
+  height: 70px;
+  border-radius: 80%;
+  background-color: whitesmoke;
+  position: absolute;
+  top: -35px;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
+}
+.ear::before {
+  content: "";
+  width: 12px;
+  height: 40px;
+  border-radius: inherit;
+  background-color: lightcoral;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+}
+.ear--left {
+  left: 10px;
+}
+.ear--right {
+  right: 10px;
+}
+
+.head {
+  width: 100%;
+  height: 80px;
+  background-color: whitesmoke;
+  border-start-start-radius: 40px;
+  border-start-end-radius: 40px;
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
+}
+.head::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+}
+.head::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-block-start: 30px solid olivedrab;
+  background-image: linear-gradient(50deg, #a55c3a 10%, #c26b43 10%, #c26b43 20%, #a55c3a 20%, #a55c3a 30%, #c26b43 30%, #c26b43 40%, #a55c3a 40%, #a55c3a 50%, #c26b43 50%, #c26b43 60%, #a55c3a 60%, #a55c3a 70%, #c26b43 70%, #c26b43 80%, #a55c3a 80%, #a55c3a 90%, #c26b43 90%);
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px, rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;
+}
+.wall::before {
+  content: "";
+  display: block;
+  border-block-start: 8px dashed olivedrab;
+}
+
 .layer {
   position: absolute;
 }
 .layer__1 {
-  z-index: 1;
+  z-index: 10;
   left: 25%;
   width: 80px;
   height: 70%;
-  border-start-start-radius: 40px;
-  border-start-end-radius: 40px;
-  background-color: whitesmoke;
   bottom: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
 .layer__2 {
-  z-index: 2;
+  z-index: 20;
   right: 25%;
   width: 80px;
   height: 70%;
-  border-start-start-radius: 40px;
-  border-start-end-radius: 40px;
-  background-color: whitesmoke;
   bottom: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
 .layer__3 {
-  z-index: 3;
+  z-index: 30;
   left: 15%;
   bottom: 0;
-  width: 290px;
+  width: 70%;
   height: 65%;
-  border-start-start-radius: 20px;
-  border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
-  background-image: linear-gradient(50deg, #a55c3a 10%, #c26b43 10%, #c26b43 20%, #a55c3a 20%, #a55c3a 30%, #c26b43 30%, #c26b43 40%, #a55c3a 40%, #a55c3a 50%, #c26b43 50%, #c26b43 60%, #a55c3a 60%, #a55c3a 70%, #c26b43 70%, #c26b43 80%, #a55c3a 80%, #a55c3a 90%, #c26b43 90%);
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px, rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;
-}
-.layer__3::before {
-  content: "";
-  display: block;
-  width: 100%;
-  border-block-start: 12px dashed olivedrab;
 }
 .layer__4 {
-  z-index: 4;
+  z-index: 40;
   left: 10%;
   width: 80px;
   height: 50%;
-  border-start-start-radius: 40px;
-  border-start-end-radius: 40px;
-  background-color: whitesmoke;
   bottom: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
 .layer__5 {
-  z-index: 5;
+  z-index: 50;
   left: 5%;
   bottom: 0;
-  width: 220px;
+  width: 50%;
   height: 45%;
-  border-start-start-radius: 20px;
-  border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
-  background-image: linear-gradient(50deg, #a55c3a 10%, #c26b43 10%, #c26b43 20%, #a55c3a 20%, #a55c3a 30%, #c26b43 30%, #c26b43 40%, #a55c3a 40%, #a55c3a 50%, #c26b43 50%, #c26b43 60%, #a55c3a 60%, #a55c3a 70%, #c26b43 70%, #c26b43 80%, #a55c3a 80%, #a55c3a 90%, #c26b43 90%);
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px, rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;
-}
-.layer__5::before {
-  content: "";
-  display: block;
-  width: 100%;
-  border-block-start: 12px dashed olivedrab;
 }
 .layer__6 {
-  z-index: 6;
+  z-index: 60;
   right: 15%;
   width: 80px;
   height: 35%;
-  border-start-start-radius: 40px;
-  border-start-end-radius: 40px;
-  background-color: whitesmoke;
   bottom: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
 .layer__7 {
-  z-index: 7;
+  z-index: 70;
   right: 5%;
   bottom: 0;
-  width: 200px;
+  width: 45%;
   height: 30%;
-  border-start-start-radius: 20px;
-  border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
-  background-image: linear-gradient(50deg, #a55c3a 10%, #c26b43 10%, #c26b43 20%, #a55c3a 20%, #a55c3a 30%, #c26b43 30%, #c26b43 40%, #a55c3a 40%, #a55c3a 50%, #c26b43 50%, #c26b43 60%, #a55c3a 60%, #a55c3a 70%, #c26b43 70%, #c26b43 80%, #a55c3a 80%, #a55c3a 90%, #c26b43 90%);
-  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px, rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;
-}
-.layer__7::before {
-  content: "";
-  display: block;
-  width: 100%;
-  border-block-start: 12px dashed olivedrab;
 }
 .layer__8 {
-  z-index: 8;
+  z-index: 80;
 }
 .layer__9 {
-  z-index: 9;
+  z-index: 90;
 }
 .layer__10 {
-  z-index: 10;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=styles.css.map */

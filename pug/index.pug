@@ -1,14 +1,29 @@
-extends components/template.pug 
+extends components/template.pug
+
+mixin rabbit 
+  .ear.ear--left
+  .ear.ear--right
+  .head 
 
 block content
   main.container 
     .layer.layer__1
+      +rabbit
     .layer.layer__2
+      +rabbit
     .layer.layer__3
+      .wall
     .layer.layer__4
+      +rabbit
     .layer.layer__5
+      .wall
     .layer.layer__6
+      +rabbit
     .layer.layer__7
+      .wall
     .layer.layer__8
+      //- Decoration
     .layer.layer__9
+      //- Decoration
     .layer.layer__10
+      //- Decoration
