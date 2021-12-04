@@ -34,6 +34,66 @@ html {
   overflow: hidden;
 }
 
+.layer {
+  position: absolute;
+  bottom: 0;
+}
+.layer__1 {
+  z-index: 10;
+  left: 25%;
+  width: 80px;
+  height: 70%;
+}
+.layer__2 {
+  z-index: 20;
+  right: 25%;
+  width: 80px;
+  height: 70%;
+}
+.layer__3 {
+  z-index: 30;
+  left: 15%;
+  width: 70%;
+  height: 65%;
+}
+.layer__4 {
+  z-index: 40;
+  left: 10%;
+  width: 80px;
+  height: 50%;
+}
+.layer__5 {
+  z-index: 50;
+  left: 5%;
+  width: 50%;
+  height: 45%;
+}
+.layer__6 {
+  z-index: 60;
+  right: 15%;
+  width: 80px;
+  height: 35%;
+}
+.layer__7 {
+  z-index: 70;
+  right: 5%;
+  width: 45%;
+  height: 30%;
+}
+.layer__8 {
+  z-index: 100;
+}
+.layer__9 {
+  z-index: 90;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.layer__10 {
+  z-index: 100;
+  right: 0;
+}
+
 .ear {
   width: 20px;
   height: 70px;
@@ -105,66 +165,61 @@ html {
   border-block-start: 8px dashed olivedrab;
 }
 
-.layer {
+.cloud {
+  width: 110px;
+  height: 150px;
+  background-color: whitesmoke;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
+}
+.cloud::before {
+  content: "";
+  width: 160px;
+  height: 90px;
+  background-color: inherit;
   position: absolute;
-}
-.layer__1 {
-  z-index: 10;
-  left: 25%;
-  width: 80px;
-  height: 70%;
   bottom: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
-.layer__2 {
-  z-index: 20;
-  right: 25%;
-  width: 80px;
-  height: 70%;
-  bottom: 0;
+.cloud--left {
+  border-start-end-radius: 60px;
 }
-.layer__3 {
-  z-index: 30;
-  left: 15%;
-  bottom: 0;
-  width: 70%;
-  height: 65%;
+.cloud--left::before {
+  border-start-end-radius: inherit;
 }
-.layer__4 {
-  z-index: 40;
-  left: 10%;
-  width: 80px;
-  height: 50%;
-  bottom: 0;
+.cloud--right {
+  border-start-start-radius: 60px;
 }
-.layer__5 {
-  z-index: 50;
-  left: 5%;
-  bottom: 0;
-  width: 50%;
-  height: 45%;
+.cloud--right::before {
+  border-start-start-radius: inherit;
+  right: 0;
 }
-.layer__6 {
-  z-index: 60;
-  right: 15%;
-  width: 80px;
-  height: 35%;
-  bottom: 0;
+
+.grass {
+  width: 100px;
+  height: 90px;
+  background-color: olivedrab;
+  border-radius: 50px 50px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
-.layer__7 {
-  z-index: 70;
-  right: 5%;
-  bottom: 0;
-  width: 45%;
-  height: 30%;
+.grass::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 110px;
+  background-color: inherit;
+  border-radius: inherit;
+  transform: translate(-70px, -20px);
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
-.layer__8 {
-  z-index: 80;
-}
-.layer__9 {
-  z-index: 90;
-}
-.layer__10 {
-  z-index: 100;
+.grass::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 110px;
+  background-color: inherit;
+  border-radius: inherit;
+  transform: translate(70px, -130px);
+  box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px;
 }
 
 /*# sourceMappingURL=styles.css.map */

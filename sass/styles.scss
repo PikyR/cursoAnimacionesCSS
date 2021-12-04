@@ -25,6 +25,59 @@ html {
   overflow: hidden;
 }
 
+.layer {
+  position: absolute;
+  bottom: 0;
+
+  &__1 {
+    z-index: 10;
+    left: 25%;
+    @include rabbit-container(70%);
+  }
+  &__2 {
+    z-index: 20;
+    right: 25%;
+    @include rabbit-container(70%);
+  }
+  &__3 {
+    z-index: 30;
+    left: 15%;
+    @include wall-container(70%, 65%);
+  }
+  &__4 {
+    z-index: 40;
+    left: 10%;
+    @include rabbit-container(50%);
+  }
+  &__5 {
+    z-index: 50;
+    left: 5%;
+    @include wall-container(50%, 45%);
+  }
+  &__6 {
+    z-index: 60;
+    right: 15%;
+    @include rabbit-container(35%)
+  }
+  &__7 {
+    z-index: 70;
+    right: 5%;
+    @include wall-container(45%, 30%)
+  }
+  &__8 {
+    z-index: 100;
+  }
+  &__9 {
+    z-index: 90;
+    width: 100%; 
+    display: flex;    
+    justify-content: center;
+  }
+  &__10 {
+    z-index: 100;
+    right: 0;
+  }
+}
 
 .ear {
   width: 20px;
@@ -89,51 +142,67 @@ html {
   @include shadow(inner);
 }
 
-.layer {
-  position: absolute;
+.cloud {
+  width: 110px;
+  height: 150px;
+  background-color: whitesmoke;
+  @include shadow(simple);
 
-  &__1 {
-    z-index: 10;
-    left: 25%;
-    @include rabbit-container(70%);
+  &::before {
+    content: "";
+    width: 160px;
+    height: 90px;
+    background-color: inherit;    
+    position: absolute;
+    bottom: 0;
+    @include shadow(simple)
   }
-  &__2 {
-    z-index: 20;
-    right: 25%;
-    @include rabbit-container(70%);
+
+  &--left {
+    border-start-end-radius: 60px;
+    &::before {
+      border-start-end-radius: inherit;
+    }
   }
-  &__3 {
-    z-index: 30;
-    left: 15%;
-    @include wall-container(70%, 65%);
+
+  &--right {
+    border-start-start-radius: 60px;
+    
+    &::before {
+      border-start-start-radius: inherit;
+      right: 0;
+    }
   }
-  &__4 {
-    z-index: 40;
-    left: 10%;
-    @include rabbit-container(50%);
+}
+
+.grass {  
+  width: 100px;
+  height: 90px;
+  background-color: olivedrab;
+  border-radius: 50px 50px 0 0;
+  
+  @include shadow(simple);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 110px;
+    background-color: inherit;
+    border-radius: inherit;
+    transform: translate(-70px, -20px);
+    @include shadow(simple);
   }
-  &__5 {
-    z-index: 50;
-    left: 5%;
-    @include wall-container(50%, 45%);
-  }
-  &__6 {
-    z-index: 60;
-    right: 15%;
-    @include rabbit-container(35%)
-  }
-  &__7 {
-    z-index: 70;
-    right: 5%;
-    @include wall-container(45%, 30%)
-  }
-  &__8 {
-    z-index: 80;
-  }
-  &__9 {
-    z-index: 90;
-  }
-  &__10 {
-    z-index: 100;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 110px;
+    background-color: inherit;
+    border-radius: inherit;
+    transform: translate(70px, -130px);
+    @include shadow(simple);
+    
   }
 }

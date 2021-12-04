@@ -62,11 +62,9 @@
 @mixin rabbit-container($height) {
   width: 80px;
   height: $height;
-  bottom: 0;
 }
 
 @mixin wall-container($width, $height) {
-  bottom: 0;
   width: $width;
   height: $height;  
 }
