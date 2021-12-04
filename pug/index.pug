@@ -6,18 +6,25 @@ mixin rabbit
   .head
 
 block content
-  main.container 
+  main.container
+    header.header 
+      h1.header__title animationland
+      .score Puntaje:
     .layer.layer__1
+      input(type="checkbox")
       +rabbit
     .layer.layer__2
+      input(type="checkbox")
       +rabbit
     .layer.layer__3
       .wall
     .layer.layer__4
+      input(type="checkbox")
       +rabbit
     .layer.layer__5
       .wall
     .layer.layer__6
+      input(type="checkbox")
       +rabbit
     .layer.layer__7
       .wall

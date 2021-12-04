@@ -1,13 +1,23 @@
 @keyframes blink {
-  0% {
-    height: 7px;
-  }
-  5% {
-    height: 2px;
-    transform: translate(0px, 50%);
-  }
   10% {
-    height: 7px;
-    transform: translate(0px, 0px);
+    transform: scaleY(1);
+  }
+  30% {
+    transform: scaleY(0.2);
+  }
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes rabbit-animation {
+  0% {
+    transform: translateY(-10px);
+  }
+  30% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(-10px);
   }
 }

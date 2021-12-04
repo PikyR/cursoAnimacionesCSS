@@ -1,0 +1,73 @@
+.wall {
+  width: 100%;
+  height: 100%;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+  border-block-start: 25px solid olivedrab;
+  @include wall-bg();
+  @include shadow(inner);
+}
+
+.cloud {
+  width: 110px;
+  height: 150px;
+  background-color: whitesmoke;
+  @include shadow(simple);
+
+  &::before {
+    content: "";
+    width: 160px;
+    height: 90px;
+    background-color: inherit;    
+    position: absolute;
+    bottom: 0;
+    @include shadow(simple)
+  }
+
+  &--left {
+    border-start-end-radius: 60px;
+    &::before {
+      border-start-end-radius: inherit;
+    }
+  }
+
+  &--right {
+    border-start-start-radius: 60px;
+    
+    &::before {
+      border-start-start-radius: inherit;
+      right: 0;
+    }
+  }
+}
+
+.grass {  
+  width: 100px;
+  height: 90px;
+  background-color: olivedrab;
+  border-radius: 50px 50px 0 0;
+  
+  @include shadow(simple);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 110px;
+    background-color: inherit;
+    border-radius: inherit;
+    transform: translate(-70px, -20px);
+    @include shadow(simple);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 110px;
+    background-color: inherit;
+    border-radius: inherit;
+    transform: translate(70px, -130px);
+    @include shadow(simple);    
+  }
+}

@@ -1,0 +1,45 @@
+.ear {  
+  width: 20px;
+  height: 70px;
+  border-radius: 80%;
+  background-color: whitesmoke;  
+  position: absolute;  
+  @include shadow(simple);
+  
+  &::before {
+    content: "";    
+    width: 12px;
+    height: 40px;
+    border-radius: inherit;
+    background-color: lightcoral;
+    position: absolute;
+    top: 8px;
+    left: 4px;
+  }
+  
+  &--left {
+    left: 10px;
+  }
+  &--right {
+    right: 10px;
+  }
+}  
+
+.head {
+  width: 100%;
+  height: 80px;
+  background-color: whitesmoke;
+  border-start-start-radius: 40px;
+  border-start-end-radius: 40px;
+  position: absolute;
+  top: 35px;
+  @include shadow(simple);
+
+  &::before{
+    @include eye(l);
+  }
+  
+  &::after {
+    @include eye(r);
+  }
+}
