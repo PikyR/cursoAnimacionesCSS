@@ -1,5 +1,6 @@
 @import "./components/score";
 @import "./components/mixins";
+@import "./components/animations";
 
 html {
   min-width: 320px;
@@ -130,14 +131,7 @@ html {
   height: 100%;
   border-start-start-radius: 20px;
   border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
- 
-  &::before {
-    content: "";
-    display: block;    
-    border-block-start: 8px dashed olivedrab;
-  }
-  
+  border-block-start: 25px solid olivedrab;
   @include wall-bg();
   @include shadow(inner);
 }

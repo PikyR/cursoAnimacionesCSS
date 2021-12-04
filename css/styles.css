@@ -13,6 +13,7 @@ input:checked {
   content: counter(score-counter);
 }
 
+@keyframes blink {}
 html {
   min-width: 320px;
 }
@@ -137,6 +138,7 @@ html {
   background-color: black;
   position: absolute;
   top: 18px;
+  animation-name: blink;
   left: 25px;
 }
 .head::after {
@@ -147,6 +149,7 @@ html {
   background-color: black;
   position: absolute;
   top: 18px;
+  animation-name: blink;
   right: 25px;
 }
 
@@ -155,14 +158,9 @@ html {
   height: 100%;
   border-start-start-radius: 20px;
   border-start-end-radius: 20px;
-  border-block-start: 30px solid olivedrab;
+  border-block-start: 25px solid olivedrab;
   background-image: linear-gradient(50deg, #a55c3a 10%, #c26b43 10%, #c26b43 20%, #a55c3a 20%, #a55c3a 30%, #c26b43 30%, #c26b43 40%, #a55c3a 40%, #a55c3a 50%, #c26b43 50%, #c26b43 60%, #a55c3a 60%, #a55c3a 70%, #c26b43 70%, #c26b43 80%, #a55c3a 80%, #a55c3a 90%, #c26b43 90%);
   box-shadow: rgba(50, 50, 93, 0.25) 10px 5px 12px -5px, rgba(50, 50, 93, 0.25) -10px 5px 12px -5px, rgba(0, 0, 0, 0.3) 5px 5px 10px -7px, rgba(0, 0, 0, 0.3) -5px 5px 10px -7px, rgba(0, 0, 0, 0.35) -10px 0px 40px -8px inset;
-}
-.wall::before {
-  content: "";
-  display: block;
-  border-block-start: 8px dashed olivedrab;
 }
 
 .cloud {
