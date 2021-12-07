@@ -186,7 +186,6 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
-  text-align: center;
   color: #00144b;
   background: linear-gradient(to bottom, #2980b9, #6dd5fa, #beebfb);
 }
@@ -207,12 +206,14 @@ body {
   font-family: "Are You Serious", cursive;
   font-size: 3.2rem;
   margin-block-start: 20px;
+  text-align: center;
 }
 
 .score {
   font-family: "Press Start 2P", cursive;
   margin-block-start: 10px;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .layer {
