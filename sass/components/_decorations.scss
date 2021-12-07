@@ -28,6 +28,7 @@
     border-start-end-radius: 60px;
     &::before {
       border-start-end-radius: inherit;
+      left: 0;
     }
   }
 

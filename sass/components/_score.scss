@@ -4,7 +4,6 @@ body {
 
 input:checked {
   counter-increment: score-counter;
-  // background-color: salmon;
 }
 
 input{
@@ -16,8 +15,6 @@ input{
   height: 80px;
 }
 
-.score {
-  &::after{
-    content: counter(score-counter);    
-  }
+.score::after{
+  content: counter(score-counter);    
 }

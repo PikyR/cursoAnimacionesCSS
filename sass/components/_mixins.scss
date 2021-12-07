@@ -74,7 +74,7 @@
 }
 
 @mixin rabbit-animation-config($duration) {
-  // animation-name: rabbit-animation;
+  animation-name: rabbit-animation;
   animation-duration: $duration;
   animation-timing-function: cubic-bezier(.3,-0.34,.47,.65);
   animation-iteration-count: infinite;
